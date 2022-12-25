@@ -21,6 +21,14 @@ namespace RssReader.ViewModel
 
         private void ReadRss()
         {
+            // Ispravna verzija
+            // var posts = RssHelper.GetPosts();
+
+            // Fake verzija
+            // var posts = FakeRssHelper.GetPosts();
+
+            // Implementacija Interfejsa
+            IRssHelper rssHelper;
             var posts = RssHelper.GetPosts();
 
             Items.Clear();
