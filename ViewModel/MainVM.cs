@@ -10,10 +10,15 @@ namespace RssReader.ViewModel
 {
     public class MainVM
     {
+        // Implementacija Interfejsa
+        IRssHelper rssHelper;
+
         public ObservableCollection<Item> Items { get; set; }
 
-        public MainVM()
+        public MainVM(IRssHelper rssHelper)
         {
+            this.rssHelper = rssHelper;
+
             Items = new ObservableCollection<Item>();
 
             ReadRss();
@@ -27,9 +32,7 @@ namespace RssReader.ViewModel
             // Fake verzija
             // var posts = FakeRssHelper.GetPosts();
 
-            // Implementacija Interfejsa
-            IRssHelper rssHelper;
-            var posts = RssHelper.GetPosts();
+            var posts = rssHelper.GetPosts();
 
             Items.Clear();
 

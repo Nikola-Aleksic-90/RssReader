@@ -34,7 +34,7 @@ namespace RssReader.ViewModel
                 Title = "чћжшђљњ   čćžšđ",
                 Description = "proba da se vidi da li prepoznaje znakove",
                 PubDate = "25:61:72 , 31.Feb. 3415",
-                Link = "probaj__i_glagoljicu.co.rs"
+                Link = "probaj__i__glagoljicu.co.rs"
             });
 
             return items;
